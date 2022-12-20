@@ -2,19 +2,18 @@
     <main class="home-page">
         <h1>Recipes</h1>
         <p>This is the recipes page.</p>
-        <button @click = "togglePopup">Add new Recipe</button>
+        <button @click="togglePopup">Add new Recipe</button>
         <div class="recipes">
-            <div class="card" v-for="recipe in $store.state.recipes"
-            :key="recipe.slug">
+            <div class="card" v-for="recipe in $store.state.recipes" :key="recipe.slug">
                 <h2>{{ recipe.title }}</h2>
                 <p>{{ recipe.description }}</p>
                 <router-link :to="`/recipe/${recipe.slug}`">
-                    <button>View Recipe</button>
+                    <button class="button">View Recipe</button>
                 </router-link>
             </div>
         </div>
 
-        <div class="add-recipe-popup" v-if = "popupOpen">
+        <div class="add-recipe-popup" v-if="popupOpen">
             <div class="popup-content">
                 <h2>Add new recipe</h2>
 
@@ -45,7 +44,7 @@
                         <button class="button">Add Step</button>
                     </div>
                     <button class="button" type="submit">Add Recipe</button>
-                    <button type="button" @click = "togglePopup">Close</button>
+                    <button type="button" @click="togglePopup">Close</button>
                 </form>
             </div>
         </div>
@@ -61,7 +60,7 @@ export default {
         const newRecipe = ref(
             {
                 title: '',
-                description: ' ',
+                description: '',
                 ingredients: [],
                 method: [],
                 ingredientsRows: 1,
@@ -84,11 +83,20 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+
     .button {
             display: flex;
             align-items: center;
-            text-decoration: none; 
-            padding: 1rem 1rem;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            
     }
+
+    .card {
+        h2, p {
+        color: #FFF;
+        }
+    }
+
 </style>

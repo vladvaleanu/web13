@@ -1,6 +1,6 @@
 import { createStore } from 'vuex'
 
-export default createStore ({
+export default createStore({
     state: {
         recipes: [
             {
@@ -10,11 +10,11 @@ export default createStore ({
                 ingredients: [
                     '1 kg pui',
                     '500g rosii la borcan',
-                    'smantana'
+                    'smantana',
                 ],
                 instructions: [
                     'faci curry-ul',
-                    'mananci'
+                    'mananci',
                 ]
             },
             {
@@ -24,12 +24,12 @@ export default createStore ({
                 ingredients: [
                     'toppinguri',
                     'aluat',
-                    'smantana'
+                    'smantana',
                 ],
                 instructions: [
                     'faci pizza',
                     'bagi la cuptor',
-                    'mananci'
+                    'mananci',
                 ]
             }
         ]
@@ -38,13 +38,6 @@ export default createStore ({
     mutations: {
         ADD_RECIPE (state, recipe) {
             state.recipes.push(recipe)
-        }
-
-    },
-    actions: {
-
-    },
-    modules: {
-
+          }
     }
 })
