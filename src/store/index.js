@@ -12,7 +12,7 @@ export default createStore({
                     '500g rosii la borcan',
                     'smantana',
                 ],
-                instructions: [
+                method: [
                     'faci curry-ul',
                     'mananci',
                 ]
@@ -26,7 +26,7 @@ export default createStore({
                     'aluat',
                     'smantana',
                 ],
-                instructions: [
+                method: [
                     'faci pizza',
                     'bagi la cuptor',
                     'mananci',

@@ -23,6 +23,11 @@ const router = createRouter({
         {
             path: '/account',
             component: Account
+        },
+        {
+            path: '/recipe/:slug',
+            name: 'Recipe',
+            component: () => import('../views/Recipe.vue')
         }
     ]
 })
